@@ -1,2 +1,2 @@
-release: node_modules/.bin/sequelize database:migrations
+release: node_modules/.bin/sequelize db:migrate
 web: yarn start
