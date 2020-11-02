@@ -1,5 +1,3 @@
-// import 'dotenv/config';
-
 import express from 'express';
 import path from 'path';
 import * as Sentry from '@sentry/node';
@@ -9,6 +7,8 @@ import 'express-async-errors';
 import routes from './routes';
 import './database/index';
 import SentryConfig from './config/SentryConfig';
+
+import 'dotenv/config';
 
 class App {
   constructor() {
