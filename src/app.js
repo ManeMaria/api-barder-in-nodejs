@@ -1,15 +1,14 @@
-require('dotenv').config();
+import express from 'express';
+import path from 'path';
+import * as Sentry from '@sentry/node';
+import cors from 'cors';
+import Youch from 'youch';
+import 'express-async-errors';
+import routes from './routes';
+import './database/index';
+import SentryConfig from './config/SentryConfig';
 
-const express = require('express');
-const path = require('path');
-const Sentry = require('@sentry/node');
-const cors = require('cors');
-const Youch = require('youch');
-require('express-async-errors');
-
-const routes = './routes';
-require('./database/index');
-const SentryConfig = require('./config/SentryConfig');
+import 'dotenv/config';
 
 class App {
   constructor() {
@@ -49,4 +48,4 @@ class App {
   }
 }
 
-module.exports = new App().server;
+export default new App().server;
