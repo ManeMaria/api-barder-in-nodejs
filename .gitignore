@@ -6,3 +6,5 @@ node_modules
 .vscode
 yarn-error.log
 yarn.lock
+tmp/uploads/*
+!tmp/uploads/.gitkeep
